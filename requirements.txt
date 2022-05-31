@@ -9,4 +9,4 @@ Shop Page
 1. Navbar that stays at top with scroll
 2. Footer (TOS, Conctact Us, Powered by..., etc.)
 3. Grid layout products
-4. 
+4. 4
