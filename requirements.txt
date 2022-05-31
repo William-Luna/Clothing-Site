@@ -1,0 +1,12 @@
+Landing Page
+
+1. Background Image
+2. "Shop Now" Button
+3. Responiveness
+
+Shop Page
+
+1. Navbar that stays at top with scroll
+2. Footer (TOS, Conctact Us, Powered by..., etc.)
+3. Grid layout products
+4. 
