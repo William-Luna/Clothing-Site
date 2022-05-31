@@ -14,3 +14,4 @@ Shop Page
 JS
 1. Sort products (JS)
 2. Adjust number of items on page
+3. Hello
