@@ -18,6 +18,11 @@
     padding-top : 10px;
 }
 
+.header-title{
+    position : relative;
+    top : 20px;
+}
+
 .header-list{
     display : flex;
     flex-direction: row;
