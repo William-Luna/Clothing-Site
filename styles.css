@@ -5,8 +5,8 @@
 
 .shop-header{
     height : 130px;
-    background-color: white; /*Deciding between white BG and black text, or black BG and white text, leaning towards the first one. (?)*/
-    color : black;
+    background-color: white; /*Header BG color, change as needed.*/
+    color : black; /*Header text color, change as needed.*/
     width : 100%;
 }
 
@@ -16,6 +16,8 @@
     align-items: center;
     width: 100%;
     padding-top : 10px;
+    min-height : 100vh;
+    min-width : 25%;
 }
 
 .header-title{
@@ -32,10 +34,12 @@
     font-size : 20px;
     padding-top : 50px;
     list-style: none;
+    min-width: 100vh;
 }
 
 .hr-div{
     width : 100%;
+    min-width : 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -43,4 +47,47 @@
 
 .header-item-divider{
     width : 75%;
+}
+
+/*Search Bar & Sort Bar*/
+
+/*Div used to posititon the search bar, icon, and sort bar*/
+.search-sort-div{
+    width : 350px;
+    margin-left : 510px;
+    padding-left : 45px;
+    padding-top : 15px;
+    padding-bottom : 15px;
+    /*background-color: rgba(172, 172, 172, 0.178);*/
+    border-radius : 15px;
+    display : flex;
+    flex-direction : row;
+}
+
+/*Positions everything to be centered horizontally in the form*/
+.search-form{
+    display : flex;
+    flex-direction: row;
+}
+
+.search-bar{
+    width : 250px;
+    height : 25px;
+    border-radius : 5px;
+
+}
+
+.search-button{
+    height : 29px;
+    margin-left : 10px;
+}
+
+.search-button-img{
+    height : 25px;
+}
+
+.search-button-img:hover{
+    mix-blend-mode: multiply;
+    background-color: rgb(163, 163, 163);
+    cursor: pointer;
 }
