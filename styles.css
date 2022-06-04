@@ -74,12 +74,14 @@
     width : 250px;
     height : 25px;
     border-radius : 5px;
+    border : 2px solid black;
 
 }
 
 .search-button{
     height : 29px;
     margin-left : 10px;
+    border : 1.5px solid black;
 }
 
 .search-button-img{
