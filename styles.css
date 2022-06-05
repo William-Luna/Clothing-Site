@@ -5,12 +5,14 @@
 }
 
 
-.shop-header{
-    height : 130px;
-    background-color: white; /*Header BG color, change as needed.*/
-    color : black; /*Header text color, change as needed.*/
-    width : 100%;
-     position: sticky;
+.shop-header {
+    height: 130px;
+    background-color: white;
+    /*Header BG color, change as needed.*/
+    color: black;
+    /*Header text color, change as needed.*/
+    width: 100%;
+    position: sticky;
     top: 0;
 }
 
@@ -20,12 +22,11 @@
     align-items: center;
     width: 100%;
     padding-top: 10px;
-    min-height : 100vh;
-    min-width : 25%;
+    min-height: 100vh;
+    min-width: 25%;
 }
 
 .header-navbar {
-    width: 900px;
     font-size: 20px;
     padding-top: 50px;
 }
@@ -34,6 +35,7 @@
 
 .header-title {
     position: relative;
+    text-align: center;
     top: 0.8em;
 }
 
@@ -57,56 +59,83 @@
 
 .hr-div {
     width: 100%;
-     min-width : 100vh;
+    min-width: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.header-item-divider{
-    width : 75%;
+
+.header-item-divider {
+    margin-top: 0.5em;
+    width: 75%;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /*Search Bar & Sort Bar*/
 
 /*Div used to posititon the search bar, icon, and sort bar*/
-.search-sort-div{
-    width : 350px;
-    margin-left : 495px;
-    padding-left : 45px;
-    padding-top : 15px;
-    padding-bottom : 15px;
+.search-sort-div {
+    width: 350px;
+    margin-left: 495px;
+    padding-left: 45px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     /*background-color: rgba(172, 172, 172, 0.178);*/
-    border-radius : 15px;
-    display : flex;
-    flex-direction : row;
-}
-
-/*Positions everything to be centered horizontally in the form*/
-.search-form{
-    display : flex;
+    border-radius: 15px;
+    display: flex;
     flex-direction: row;
 }
 
-.search-bar{
-    width : 250px;
-    height : 25px;
-    border-radius : 5px;
-    border : 2px solid black;
+/*Positions everything to be centered horizontally in the form*/
+.search-form {
+    display: flex;
+    flex-direction: row;
+}
+
+.search-bar {
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border: 2px solid black;
 
 }
 
-.search-button{
-    height : 29px;
-    margin-left : 10px;
-    border : 1.5px solid black;
+.search-button {
+    height: 29px;
+    margin-left: 10px;
+    border: 1.5px solid black;
 }
 
-.search-button-img{
-    height : 25px;
+.search-button-img {
+    height: 25px;
 }
 
-.search-button-img:hover{
+.search-button-img:hover {
     mix-blend-mode: multiply;
     background-color: rgb(163, 163, 163);
     cursor: pointer;
 }
+
+@media(max-width: 800px) {
+
+    .shop-header {
+        height: 280px;
+    }
+
+
+
+    .header-list {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .header-icons {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media(min-width: 200px) {}
