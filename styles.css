@@ -26,9 +26,18 @@
     min-width: 25%;
 }
 
+.title-icons-header {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-top: 0.8em;
+}
+
 .header-navbar {
     font-size: 20px;
-    padding-top: 50px;
+    padding-top: 25px;
 }
 
 
@@ -36,7 +45,8 @@
 .header-title {
     position: relative;
     text-align: center;
-    top: 0.8em;
+    text-decoration: none;
+    /* top: 0.8em; */
 }
 
 .header-list {
@@ -52,8 +62,11 @@
 .header-icons {
     display: flex;
     flex-direction: row;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    align-items: center;
     list-style: none;
+    padding-left: 20px;
+    padding-right: 20px;
 
 }
 
@@ -78,15 +91,15 @@
 
 /*Div used to posititon the search bar, icon, and sort bar*/
 .search-sort-div {
-    width: 350px;
-    margin-left: 495px;
-    padding-left: 45px;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    /* width: 350px;*/
+    /*margin-left: 495px;
+    padding-left: 45px;*/
+    /* padding-top: 15px;
+    padding-bottom: 15px; */
     /*background-color: rgba(172, 172, 172, 0.178);*/
     border-radius: 15px;
-    display: flex;
-    flex-direction: row;
+    /* display: flex;
+    flex-direction: row; */
 }
 
 /*Positions everything to be centered horizontally in the form*/
@@ -132,8 +145,16 @@
         align-items: center;
     }
 
-    .header-icons {
+    /* .header-icons {
         flex-direction: column;
+        align-items: center;
+    } */
+}
+
+@media (max-width: 700px) {
+    .title-icons-header {
+        flex-direction: column;
+        justify-content: space-between;
         align-items: center;
     }
 }
