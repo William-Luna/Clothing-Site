@@ -1,3 +1,2 @@
 # Clothing-Site
-
-Felix Choy's forked version of the clothing site. 
+Felix Choy's Forked Version of the Clothing Site repository.
