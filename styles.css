@@ -4,7 +4,6 @@
     padding: 0;
 }
 
-
 .shop-header {
     height: 130px;
     background-color: white;
@@ -12,7 +11,6 @@
     color: black;
     /*Header text color, change as needed.*/
     width: 100%;
-    position: sticky;
     top: 0;
     z-index: -1; /*Fixes search bar & icon*/
 }
@@ -92,28 +90,27 @@
 
 /*Div used to posititon the search bar, icon, and sort bar*/
 .search-sort-div {
-    /* width: 350px;*/
-    /*margin-left: 495px;
-    padding-left: 45px;*/
-    /* padding-top: 15px;
-    padding-bottom: 15px; */
+    width: 300px;
+    padding-top: 15px;
+    padding-bottom: 15px;
     /*background-color: rgba(172, 172, 172, 0.178);*/
     border-radius: 15px;
-    /* display: flex;
-    flex-direction: row; */
-}
-
-/*Positions everything to be centered horizontally in the form*/
-.search-form {
     display: flex;
     flex-direction: row;
+    margin : 0 auto; /*Centers search bar within div*/
+}
+
+.search-form {
+    display: flex;
+    flex-direction: row; /*Positions everything to be centered horizontally in the form*/
+    margin-top : 5px;
 }
 
 .search-bar {
     width: 250px;
     height: 25px;
     border-radius: 5px;
-    border: 2px solid black;
+    border: 2px solid black
 
 }
 
@@ -133,17 +130,117 @@
     cursor: pointer;
 }
 
-@media(max-width: 800px) {
+/*Shop items css*/
+.shop-items-div{
+    display : flex;
+    flex-direction : row;
+    margin-top : 10px;
+    min-height : calc(100vh - 43px - 130px); /*Keeps the footer at the bottom of the page. The minimum height can only be 100vh - header height - footer height*/
+}
+
+.item-table{
+    align-items: center;
+    margin : 0 auto; /*Aligns table in center of div.*/
+}
+
+.item-table-row{
+    display : flex;
+    flex-direction : row;
+}
+
+/*Need to fix not being able to click buttons when width shrinks down*/
+.item-table-data{
+    display : flex;
+    flex-direction : column;
+    align-items : center;
+    margin-right : 20px; /*20px spacing between each item*/
+}
+
+.item-name{
+    margin : 5px auto;
+}
+
+.item-price{
+    margin-bottom: 5px;
+}
+
+.add-to-cart-button{
+    display : flex;
+    margin : 0 auto;
+    margin-top : 10px;
+    width : 100px;
+    height : 25px;
+
+    /*Centers text horizontally and vertically*/
+    justify-content: center;
+    align-items: center;
+}
+
+
+.item-table-data-img{
+    width : 350px;
+    height : 300px;
+}
+
+/*Footer*/
+.footer-div{
+    display : flex;
+    flex-direction : column;
+    background-color : gray;
+    width : 100%;
+}
+
+.page-footer{
+    display : flex;
+    flex-direction : row;
+    align-items: center;
+    margin : 0 auto; /*centers footer text*/
+    margin-top : 25px;
+    padding-bottom : 15px;
+}
+
+.footer-links{
+    display : flex;
+    flex-direction : row;
+    text-decoration: none;
+    list-style: none;    
+    padding-right : 100px;
+}
+
+.footer-link-item{
+    margin-right : 35px;
+}
+
+.footer-link-item-anchor{
+    text-decoration: none;
+}
+
+.footer-credits{
+    font-weight : 500;
+}
+
+
+/**********Mobile View**********/
+@media(max-width: 600px) {
+
+    .html, body{
+        overflow-x: hidden; /*Remove horizontal scroll bar on mobile (looks cleaner imo)*/
+    }
 
     .shop-header {
         height: 280px;
+        /*z-index : 0; /*Keeps nav bar on top while scrolling down*/
+        z-index: -1;
     }
 
-
+    .header-div{
+        z-index: -1; 
+    }
 
     .header-list {
         flex-direction: column;
         align-items: center;
+
     }
 
     /* .header-icons {
@@ -158,6 +255,84 @@
         justify-content: space-between;
         align-items: center;
     }
+ 
+    .search-sort-div{ /*Search and sort bar will be stacked on top of each other if screen is less than 800px*/
+        flex-direction : column;
+        align-items : center;
+        z-index: -1;
+        padding : 0; /*Removes all padding for search bar*/
+        margin : 0 auto; /*Centers in div*/
+        margin-bottom : 20px;
+    }
+
+    .search-form{
+        margin-left : 0; /*Removes margin shift from fullscreen view, allows centering with margin values above*/
+    }
+
+    .shop-items-div{
+        z-index : -1;
+        margin : 0 auto; /*Centers in div*/
+    }
+
+    .item-table-row{
+        flex-direction: column;
+        z-index : -1;
+        margin : 0 auto;
+    }
+
+    .item-table-data{
+        margin-right : 0;
+        margin-bottom : 30px;
+        
+    }
+
+    /*Continue to modify this to fix footer positioning for width under about 400px*/
+    /*Current issue is that the div is touching the left hand side of the screen.*/
+    .footer-div{
+        z-index : -1;
+        padding-left : 10px;
+
+    }
+
+    .page-footer{
+        margin-top : 5px;
+    }
+
+    .footer-links{
+        padding-right : 0px;
+
+    }
+
+    .footer-link-item{
+        font-size : 14px;
+        margin-right : 15px;
+    }
+
+    .footer-credits{
+        font-size : 14px;
+        width : 200px;
+        font-weight : 300;
+    }
 }
 
-@media(min-width: 200px) {}
+@media(min-width: 400px) { /*For even smaller phones (ie. Iphone SE)*/
+
+    .page-footer{
+        margin-top : 5px;
+        padding-top : 10px;
+    }
+
+    .footer-links{
+        padding-right : 0px;
+    }
+
+    .footer-link-item{
+        font-size : 14px;
+        margin-right : 15px;
+    }
+
+    .page-footer{
+        flex-direction : row;
+    }
+
+}
