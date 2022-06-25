@@ -6,10 +6,8 @@
 
 .shop-header {
     height: 130px;
-    background-color: white;
-    /*Header BG color, change as needed.*/
-    color: black;
-    /*Header text color, change as needed.*/
+    background-color: white; /*Header BG color, change as needed.*/
+    color: black; /*Header text color, change as needed.*/
     width: 100%;
     top: 0;
     z-index: -1; /*Fixes search bar & icon*/
@@ -148,7 +146,6 @@
     flex-direction : row;
 }
 
-/*Need to fix not being able to click buttons when width shrinks down*/
 .item-table-data{
     display : flex;
     flex-direction : column;
@@ -229,7 +226,7 @@
 
     .shop-header {
         height: 280px;
-        /*z-index : 0; /*Keeps nav bar on top while scrolling down*/
+        /*z-index : 0; /*Keeps nav bar on top while scrolling down (Uncomment this if we decide on this design choice)*/
         z-index: -1;
     }
 
@@ -286,8 +283,6 @@
         
     }
 
-    /*Continue to modify this to fix footer positioning for width under about 400px*/
-    /*Current issue is that the div is touching the left hand side of the screen.*/
     .footer-div{
         z-index : -1;
         padding-left : 10px;
@@ -315,7 +310,8 @@
     }
 }
 
-@media(min-width: 400px) { /*For even smaller phones (ie. Iphone SE)*/
+/*For even smaller phones (ie. Iphone SE)*/
+@media(min-width: 400px) { 
 
     .page-footer{
         margin-top : 5px;
